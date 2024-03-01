@@ -2,7 +2,7 @@
 @{
     if (Model?.Any() != true) { return; }
 }
-<div class="umb-block-list">
+<div>
     @foreach (var block in Model)
     {
         if (block?.ContentUdi == null) { continue; }
