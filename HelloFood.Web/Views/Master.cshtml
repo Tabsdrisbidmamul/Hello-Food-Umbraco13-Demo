@@ -12,11 +12,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="/dist/main.frontend.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/css/blockgridlayout.css")" />
 </head>
 <body>
+    <vc:header></vc:header>
 
     <main class="container">
         @RenderBody()
     </main>
+
+
 </body>
 </html>

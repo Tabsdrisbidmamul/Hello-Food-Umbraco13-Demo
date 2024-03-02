@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponents\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Umbraco.Cms" Version="13.1.1" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="13.1.1" />
   </ItemGroup>
 
 </Project>

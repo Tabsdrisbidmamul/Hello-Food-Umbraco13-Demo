@@ -1,3 +1,5 @@
+using HelloFood.Web.Extensions;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -5,6 +7,7 @@ builder.CreateUmbracoBuilder()
     .AddWebsite()
     .AddDeliveryApi()
     .AddComposers()
+    .AddCustomServices()
     .Build();
 
 WebApplication app = builder.Build();
