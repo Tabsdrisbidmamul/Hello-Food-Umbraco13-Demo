@@ -1,0 +1,42 @@
+.btn {
+  color: $main-font-colour;
+  background-color: $light-pink;
+  padding: 2rem 3rem;
+  text-decoration: none;
+
+  border: 1px solid $light-black;
+  border-radius: $main-border-radius;
+
+  cursor: pointer;
+  transition: $main-all-transition;
+
+  &--cta {
+    color: $white;
+    background-color: $umbraco-blue;
+
+    padding: 1.4rem 3rem;
+
+    &:hover,
+    &:active {
+      background-color: $umbraco-blue-light;
+    }
+  }
+
+  &--cta-ghost {
+    color: $main-font-colour;
+    background-color: transparent;
+
+    padding: 1rem 3rem;
+
+    &:hover,
+    &:active {
+      background-color: $umbraco-blue;
+      color: $white;
+    }
+  }
+
+  &--menu {
+    border: none;
+    background-color: transparent;
+  }
+}

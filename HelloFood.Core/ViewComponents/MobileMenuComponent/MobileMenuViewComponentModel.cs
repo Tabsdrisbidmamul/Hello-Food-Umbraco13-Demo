@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Umbraco.Cms.Core.Models;
 
-namespace HelloFood.Core.ViewComponents.HeaderViewComponent
+namespace HelloFood.Core.ViewComponents.MobileMenuComponent
 {
-    public sealed class HeaderViewComponentModel
+    public sealed class MobileMenuViewComponentModel
     {
         public List<Link>? Links { get; set; } = null;
+        public Link? Cta { get; set; } = null;
     }
 }

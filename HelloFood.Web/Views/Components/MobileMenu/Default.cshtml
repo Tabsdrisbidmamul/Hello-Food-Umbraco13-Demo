@@ -1,0 +1,31 @@
+﻿@model HelloFood.Core.ViewComponents.MobileMenuComponent.MobileMenuViewComponentModel
+
+@{
+    if (Model.Links == null || !Model.Links.Any() || Model.Cta == null) return;
+}
+
+<div class="mobile-menu d-flex flex-column justify-content-between d-md-none">
+    <div class="d-none mobile-menu__links-container js-mobile-menu-links">
+        <ul class="mobile-menu__links">
+            @foreach(var link in Model.Links)
+            {
+                <li class="mobile-menu__link">
+                    <a href="@link.Url" target="@link.Name" aria-label="navigation for @link.Name">@link.Name</a>
+
+
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="mobile-menu__container d-flex justify-content-between align-items-center">
+        <a class="btn btn--cta-ghost" aria-label="Navigation link for @Model.Cta.Name" href="@Model.Cta.Url" target="@Model.Cta.Name">@Model.Cta.Name</a>
+
+        <button class="mobile-menu__btn-container btn btn--menu" type="button">
+            <span>Menu</span>
+            
+            <div class="mobile-menu__hamburger-icon">
+            </div>
+        </button>
+    </div>
+</div>

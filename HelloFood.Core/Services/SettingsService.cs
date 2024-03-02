@@ -26,7 +26,7 @@ namespace HelloFood.Core.Services
 
             var settings = siteRoot?
                 .Children
-                .SingleOrDefault(x => x.ContentType.Alias == ContentAliases.SettingsNode);
+                .SingleOrDefault(x => x.ContentType.Alias == ContentAliases.Nodes.SettingsNode);
 
             return settings;
         }

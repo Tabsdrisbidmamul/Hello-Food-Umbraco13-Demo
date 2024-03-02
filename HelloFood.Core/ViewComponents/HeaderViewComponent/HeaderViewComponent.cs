@@ -17,21 +17,21 @@ namespace HelloFood.Core.ViewComponents.HeaderViewComponent
         {
             var settings = _settingsService.GetSettings();
 
-            if (settings == null || !settings.HasProperty("headerLinks")) 
+            if (settings == null || !settings.HasProperty(Constants.ContentAliases.PropertyAliases.HeaderLinks)) 
             { 
                 return View(new HeaderViewComponentModel()); 
             }
 
-            var links = settings.Value<IEnumerable<Link>>("headerLinks");
+            var headerLinks = settings.Value<IEnumerable<Link>>(Constants.ContentAliases.PropertyAliases.HeaderLinks);
 
-            if (links == null)
+            if (headerLinks == null || !headerLinks.Any())
             {
                 return View(new HeaderViewComponentModel());
             }
 
             return View(new HeaderViewComponentModel
             {
-                Links = links.ToList()
+                Links = headerLinks.ToList()
             });
         }
     }

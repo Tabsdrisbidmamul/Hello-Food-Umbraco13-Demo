@@ -8,5 +8,10 @@
 @import 'abstracts/variables.scss';
 @import 'abstracts/typography.scss';
 
+// layout
+@import 'layout/layout.scss';
+
 // components
 @import 'components/header.scss';
+@import 'components/mobile-menu.scss';
+@import 'components/buttons.scss';

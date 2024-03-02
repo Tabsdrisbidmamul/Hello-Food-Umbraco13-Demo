@@ -1,6 +1,13 @@
 .header {
-  &__container {
+  &__wrapper {
     background-color: $paper-white;
+  }
+
+  &__container {
+    // border: 1px solid $light-black;
+    // border-top: none;
+    // border-bottom-left-radius: $main-border-radius;
+    // border-bottom-right-radius: $main-border-radius;
     padding: 2rem;
   }
 
