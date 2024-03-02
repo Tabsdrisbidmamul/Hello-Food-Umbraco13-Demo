@@ -1,3 +1,12 @@
+// vendors
 @import 'vendor/bootstrap-grid.min.scss';
 
+// base
 @import 'base/reset.scss';
+
+// abstract
+@import 'abstracts/variables.scss';
+@import 'abstracts/typography.scss';
+
+// components
+@import 'components/header.scss';

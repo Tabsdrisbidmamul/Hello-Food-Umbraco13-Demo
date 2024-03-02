@@ -1,9 +1,6 @@
 ﻿using HelloFood.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Models;
-using Umbraco.Cms.Core.Models.PublishedContent;
-using Umbraco.Extensions;
-
 
 namespace HelloFood.Core.ViewComponents.HeaderViewComponent
 {
@@ -20,15 +17,21 @@ namespace HelloFood.Core.ViewComponents.HeaderViewComponent
         {
             var settings = _settingsService.GetSettings();
 
-            if (settings == null) return View();
-
-            if (!settings.HasProperty("headerLinks")) return View();
+            if (settings == null || !settings.HasProperty("headerLinks")) 
+            { 
+                return View(new HeaderViewComponentModel()); 
+            }
 
             var links = settings.Value<IEnumerable<Link>>("headerLinks");
 
+            if (links == null)
+            {
+                return View(new HeaderViewComponentModel());
+            }
+
             return View(new HeaderViewComponentModel
             {
-                Title = links?.FirstOrDefault()?.Name
+                Links = links.ToList()
             });
         }
     }

@@ -3334,6 +3334,8 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -3408,4 +3410,54 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+/* COLOURS */
+/* BORDERS */
+/* TRANSITIONS */
+html {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+body,
+a {
+  font-size: 1.6rem;
+  color: #3544b1;
+}
+
+.header__container {
+  background-color: #f1f0ee;
+  padding: 2rem;
+}
+.header__link {
+  text-decoration: none;
+}
+.header__link--cta {
+  background-color: #1b264f;
+  padding: 1.4rem 3rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 250ms ease;
+}
+.header__link--cta:hover, .header__link--cta:active {
+  background-color: #3e57b4;
 }

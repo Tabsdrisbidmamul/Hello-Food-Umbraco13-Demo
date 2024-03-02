@@ -1,7 +1,31 @@
 ﻿@model HelloFood.Core.ViewComponents.HeaderViewComponent.HeaderViewComponentModel
 
-<header class="container-fluid">
+@{
+    if (Model.Links == null) return;
+}
+
+<header class="header__container container-fluid d-none d-md-block">
     <div class="container">
-        <h1>@Model.Title</h1>
+        <div class="row">
+            <div class="col-3 d-flex align-items-center">
+                <span>Logo</span>
+            </div>
+
+            @foreach(var item in Model.Links)
+            {
+                if(item.Url == "#section-3")
+                {
+                    <div class="col-3 d-inline-flex justify-content-end">
+                        <a class="header__link header__link--cta" aria-label="navigation link for @(item.Url)" href="@(item.Url)" target="@(item.Url)">@item.Name</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-3 d-flex align-items-center">
+                        <a class="header__link" aria-label="navigation link for @(item.Url)" href="@(item.Url)" target="@(item.Url)">@item.Name</a>
+                    </div>
+                }
+            }
+        </div>
     </div>
 </header>
